@@ -45,6 +45,13 @@ app.get('/about', (req,res) => {
     });
 });
 
+app.get('/project', (req,res) => {
+    res.render('project.hbs', {
+        pageTitle: 'Project Page',
+        welcomeMessage: 'View All Projects here'
+    });
+});
+
 app.get('/bad', (req, res) => {
         res.send({
             errorMsg: 'Unable to connect to server',
